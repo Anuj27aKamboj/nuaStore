@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbar-height;
+  background: $white;
+  border-bottom: 1px solid $border;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__logo {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border: 1px solid $border;
+    border-radius: $radius;
+
+    &:hover {
+      background: $bg;
+    }
+  }
+
+  &__badge {
+    background: $accent;
+    color: $white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 99px;
+  }
+}

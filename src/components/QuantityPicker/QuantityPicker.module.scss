@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $border;
+  border-radius: $radius;
+  overflow: hidden;
+
+  button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: $text;
+
+    &:hover:not(:disabled) {
+      background: $bg;
+    }
+
+    &:disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  span {
+    width: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-left: 1px solid $border;
+    border-right: 1px solid $border;
+    line-height: 40px;
+  }
+}

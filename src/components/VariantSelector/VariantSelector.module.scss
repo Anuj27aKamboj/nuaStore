@@ -1,0 +1,85 @@
+@import '../../styles/variables';
+
+.variants {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__label {
+    font-size: 13px;
+    color: $text-light;
+
+    strong {
+      color: $text;
+    }
+  }
+
+  &__swatches {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+
+    &:hover {
+      outline-color: #aaa;
+    }
+
+    &--active {
+      outline-color: $text;
+    }
+  }
+
+  &__sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__size {
+    min-width: 44px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid $border;
+    border-radius: $radius;
+    font-size: 13px;
+
+    &:hover:not(:disabled) {
+      border-color: $text;
+    }
+
+    &--active {
+      background: $text;
+      color: $white;
+      border-color: $text;
+    }
+
+    &--soldout {
+      text-decoration: line-through;
+      color: #bbb;
+      cursor: not-allowed;
+    }
+
+    &--lowstock {
+      border-color: $warning;
+      color: $warning;
+    }
+  }
+
+  &__hint {
+    font-size: 11px;
+    color: $text-light;
+  }
+}
