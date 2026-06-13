@@ -1,6 +1,3 @@
-// Fake Store API doesn't provide colours, sizes or stock.
-// We fake it using simple arrays and the product id to keep it consistent across page loads.
-
 const COLOURS = ['Black', 'White', 'Red'];
 const COLOUR_HEX: Record<string, string> = {
   Black: '#111111',
@@ -18,7 +15,6 @@ const STOCK_STATUSES: Array<'available' | 'low-stock' | 'sold-out'> = [
 ];
 
 export function getProductVariants(productId: number, category: string) {
-  // Pick 3 colours using the product id
   const c1 = COLOURS[productId % COLOURS.length];
   const c2 = COLOURS[(productId + 1) % COLOURS.length];
   const c3 = COLOURS[(productId + 2) % COLOURS.length];
